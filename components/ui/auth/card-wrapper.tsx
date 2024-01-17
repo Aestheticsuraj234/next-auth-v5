@@ -32,16 +32,16 @@ export const CardWrapper = ({
       <CardHeader>
         <Header label={headerLabel} />
       </CardHeader>
-      <CardContent>{children}</CardContent>
-      {showSocial && <CardFooter>
-        <Social/>
-        </CardFooter>}
+      <CardContent>{children}
+      </CardContent>
+      {showSocial && (
         <CardFooter>
-            <BackButton
-            label={backButtonLabel}
-            href={backButtonHref}
-            />
+          <Social />
         </CardFooter>
+      )}
+      <CardFooter className="flex justify-center items-center">
+        <BackButton label={backButtonLabel} href={backButtonHref} />
+      </CardFooter>
     </Card>
   );
 };
